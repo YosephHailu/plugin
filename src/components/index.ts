@@ -1,0 +1,8 @@
+export { default as WebButton } from './WebButton.vue'
+export { default as WebFab } from './WebFab.vue'
+export { default as WebAlert } from './WebAlert.vue'
+export { default as WebAlertMessage } from './WebAlertMessage.vue'
+export { default as WebAvatar } from './WebAvatar.vue'
+export { default as WebBanner } from './WebBanner.vue'
+export { default as WebListGroup } from './WebListGroup.vue'
+export { default as WebDropdown } from './WebDropdown.vue'
