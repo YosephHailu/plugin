@@ -1,9 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import ViewerPlugin from "./ViewerPlugin";
+import WebPlugin from './WebPlugin'
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(ViewerPlugin);
-app.mount('#app');
-
+app.use(WebPlugin)
+app.mount('#app')

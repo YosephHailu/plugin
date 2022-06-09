@@ -24,9 +24,9 @@ export default defineConfig({
   build: {
     cssCodeSplit: false,
     lib: {
-      entry: './src/ViewerPlugin.ts',
+      entry: './src/WebPlugin.ts',
       formats: ['es', 'cjs'],
-      name: 'ViewerPlugin',
+      name: 'WebPlugin',
       fileName: (format) => (format === 'es' ? 'index.js' : 'index.cjs'),
     },
     rollupOptions: {

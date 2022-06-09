@@ -8,6 +8,7 @@ import { WebAvatar } from './components'
 import { WebBanner } from './components'
 import { WebListGroup } from './components'
 import { WebDropdown } from './components'
+import { WebAppBar } from './components'
 
 export default {
   install: (app: App) => {
@@ -19,6 +20,7 @@ export default {
     app.component('WebBanner', WebBanner)
     app.component('WebListGroup', WebListGroup)
     app.component('WebDropdown', WebDropdown)
+    app.component('WebAppBar', WebAppBar)
 
   },
 }

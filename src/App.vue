@@ -22,7 +22,7 @@
         <hr class="w-7/12" />
         <div class="p-5 pb-2 space-x-5">
           <!-- //Web Flat button -->
-          <web-button @click="selectedItem(5)"> Flat btn </web-button>
+          <web-button> Flat btn </web-button>
 
           <!-- //Web button with background -->
           <web-button class="rounded-lg bg-pink-700">Rounded</web-button>
@@ -144,7 +144,8 @@
         <div class="p-5 space-x-5">
           <web-banner
             title="Addweb solution"
-            description="Browse 2728 of ready-made components in Tailwind. They are divided into UI libraries that our professional designers designed. Each of them has a resource of many variations of different types of components. Under each of them, there is a clear code created by our team of developers."
+            description="
+            Browse 2728 of ready-made components in Tailwind. They are divided into UI libraries that our professional designers designed. Each of them has a resource of many variations of different types of components. Under each of them, there is a clear code created by our team of developers."
             color=""
             alt_img="https://shuffle.dev/vendor/shuffle/img/elements/dots-red.svg"
           >
@@ -164,6 +165,26 @@
           <web-dropdown :items="items" value="label" @select="selectedItem">
           </web-dropdown>
         </div>
+
+        <h3 class="font-bold uppercase text-2xl">App bar</h3>
+        <hr class="w-5/12" />
+        <div class="p-5 space-y-5">
+          <web-app-bar title="Add-web" :items="menu_items">
+            <template #right-side>
+              <div>
+                <web-button class="bg-teal-400">Downloads</web-button>
+              </div>
+            </template>
+          </web-app-bar>
+
+          <web-app-bar title="Add-web" class="bg-pink-400 text-white">
+            <template #right-side>
+              <div>
+                <web-button class="bg-teal-400">Downloads</web-button>
+              </div>
+            </template>
+          </web-app-bar>
+        </div>
       </div>
     </div>
   </div>
@@ -181,7 +202,13 @@ const items = reactive([
   { label: "Item 6" },
 ]);
 
-function selectedItem(item) {
+const menu_items = reactive([
+  { label: "Documents", link: "#Docs" },
+  { label: "Examples", link: "#Examples" },
+  { label: "Blog", link: "#Blog" },
+]);
+
+function selectedItem(item: { label: string }) {
   console.log(item);
 }
 </script>
