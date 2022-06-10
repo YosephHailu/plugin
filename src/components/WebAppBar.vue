@@ -1,11 +1,25 @@
 <template>
-  <nav
-    class="flex items-center border-b shadow-lg justify-between flex-wrap bg-white p-6"
-  >
-    <div class="flex items-center flex-shrink-0 mr-6">
-      <slot name="logo"></slot>
+  <nav class="flex shadow-lg bg-white p-6">
+    <div class="flex flex-wrap items-center mr-6">
+      <slot name="logo">
+        <web-fab
+          class="bg-transparent hover:bg-gray-50 fill-gray-800 hover:fill-gray-800 mt-1 shadow-none"
+        >
+          <template #icon
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              role="img"
+              aria-hidden="true"
+              class="w-7 text-black"
+            >
+              <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+            </svg>
+          </template>
+        </web-fab>
+      </slot>
       <slot name="title">
-        <span class="font-semibold text-xl mt-1 tracking-tight uppercase">{{
+        <span class="font-semibold text-xl mt-1 uppercase ml-2">{{
           title
         }}</span>
       </slot>
@@ -25,12 +39,12 @@
       </button>
     </div>
 
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="block flex-grow lg:flex lg:items-center">
       <div class="text-sm lg:flex-grow">
         <a
           v-for="(item, index) in items"
           :key="index"
-          href="#responsive-header"
+          :href="item.link"
           class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
         >
           {{ item["label"] }}
@@ -44,7 +58,6 @@
 
 <script lang="ts" setup>
 import type { PropType } from "@vue/runtime-core";
-
 
 interface Item {
   label: string;

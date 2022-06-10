@@ -42,10 +42,9 @@
 
 <script lang="ts" setup>
 import { ref } from "@vue/reactivity";
-
-const props = defineProps({
+defineProps({
   items: {
-    type: [],
+    type: Array,
   },
   label: {
     type: String,

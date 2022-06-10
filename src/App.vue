@@ -16,7 +16,10 @@
       </p>
       <img class="ml-24" src="/import.png" alt="" />
     </div>
-    <div class="w-9/12 mx-auto bg-white shadow-lg mt-3">
+    <div
+      class="w-9/12 mx-auto bg-gray-100 shadow-lg mt-3"
+      style="background-color: #fafafa"
+    >
       <div class="p-5">
         <h3 class="font-bold uppercase text-2xl">Buttons</h3>
         <hr class="w-7/12" />
@@ -147,6 +150,7 @@
             description="
             Browse 2728 of ready-made components in Tailwind. They are divided into UI libraries that our professional designers designed. Each of them has a resource of many variations of different types of components. Under each of them, there is a clear code created by our team of developers."
             color=""
+            class="shadow-lg"
             alt_img="https://shuffle.dev/vendor/shuffle/img/elements/dots-red.svg"
           >
           </web-banner>

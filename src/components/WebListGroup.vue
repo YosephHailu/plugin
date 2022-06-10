@@ -12,11 +12,9 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive } from "@vue/reactivity";
-
-const props = defineProps({
+defineProps({
   items: {
-    type: [],
+    type: Array,
   },
   label: {
     type: String,
